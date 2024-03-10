@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="create-box">
+      <div class="form-in">
+        <div class="progress"></div>
+        <div class="step-col"><small>Step 1</small></div>
+        <div class="step-col"><small>Step 2</small></div>
+        <div class="step-col"><small>Step 3</small></div>
+      </div>
+      <form id="form1">
+        <h3>CREATE ACCOUNT</h3>
+        <input class="acc" id="acc1" type="text" name="Username" placeholder="Username" oninput="isUsername(this.id)" value="">
+        <p class="acc1"></p>
+        <input class="acc" id="acc2" type="password" name="Password" placeholder="Password" oninput="checkPass(this.id)" value="">
+        <p class="acc2"></p>
+        <input class="acc" id="acc3" type="password" name="Cpassword" placeholder="Confirm Password" oninput="checkCpass(this.id)" value="">
+        <p class="acc3"></p>
+        <div class="btn-box">
+          <button type="button" name="button" id="next1" onclick="nextb1()">Next</button>
+        </div>
+      </form>
+      <form id="form2">
+        <h3>PERSONAL DETAILS</h3>
+        <input class="pers" id="pers1" type="text" name="Name" placeholder="Name" maxlength="30" oninput="checkName(this.id)" value="">
+        <p class="pers1"></p>
+        <input class="pers" id="pers2" type="number" name="cno" placeholder="Contact no." maxlength="10" onkeypress="if(this.value.length==10) return false;" oninput="checkNumber(this.id)" value="">
+        <p class="pers2"></p>
+        <input class="pers" id="pers3" type="text" name="dob" placeholder="Date of Birth"  onfocus="(this.type='date')" oninput="checkDate(this.id)" value="">
+        <p class="pers3"></p>
+        <input class="pers" id="pers4" type="number" name="age" placeholder="age" max="110"  onkeypress="if(this.value>11) return false;" oninput="checkNumber(this.id)" value="">
+        <p class="pers4"></p>
+        <div class="btn-box">
+          <button type="button" name="button" id="prev1">Previous</button>
+          <button type="button" name="button" id="next2" onclick="nextb2()">Next</button>
+        </div>
+      </form>
+      <form id="form3">
+        <h3>SOCIAL LINKS</h3>
+        <input class="link" id="link1" type="url" name="gb" placeholder="Github Profile Link"  oninput="checkUrl(this.id)" value="">
+        <p class="link1"></p>
+        <input class="link" id="link2" type="url" name="fb" placeholder="Facebook Profile Link"  oninput="checkUrl(this.id)" value="">
+        <p class="link2"></p>
+        <input class="link" id="link3" type="url" name="li" placeholder="LinkedIn Profile Link"  oninput="checkUrl(this.id)" value="">
+        <p class="link3"></p>
+        <div class="btn-box">
+          <button type="button" name="button" id="prev2">Previous</button>
+          <button type="button" name="button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</html>
